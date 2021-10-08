@@ -1,9 +1,9 @@
 #include <stdio.h>
-#ifdef __unix__
-# include <unistd.h>
+#ifdef __unix__//si sous unix 
+# include <unistd.h>//utiliser unistd pour la fonction sleep
 #elif defined _WIN32
-# include <windows.h>
-#define sleep(x) Sleep(1000 * (x))
+# include <windows.h>//sinon windows
+#define sleep(x) Sleep(1000 * (x))//sleep(1)= 1000 millisecondes soit 1 sec
 #endif
 
 int cmp(char a[], char *b) //comparaison de chaînes de caractères les arguments sont les chaînes à comparer
